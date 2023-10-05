@@ -957,7 +957,7 @@
             let height = container.parentElement.clientHeight;
             console.log(width, height)
             let camera = new THREE.PerspectiveCamera( 35, width / height, 0.1, 50 );
-            let camera_init_position = new THREE.Vector3( 0, 0, 0 );
+            let camera_init_position = new THREE.Vector3( -1.5, 0.35, 1.2 );
             // let camera_init_position = new THREE.Vector3( 0., 0., 1.2 );
             camera_init_position = camera_init_position.multiplyScalar(1.5)
             //if (div_name.includes("style")) {
@@ -1366,10 +1366,10 @@
             //setup_style_render_divs("mesh_style_1", './models/chair_style_1')
             //setup_style_render_divs("mesh_style_2", './models/chair_style_2')
             //setup_style_render_divs("mesh_style_3", './models/chair_style_3')
-            // setup_style_render_divs("mesh_style_0", './models/mesh_mustafa_')
-            // setup_style_render_divs("mesh_style_1", './models/mesh_id98_')
-            // setup_style_render_divs("mesh_style_2", './models/mesh_id97_')
-            // setup_style_render_divs("mesh_style_3", './models/mesh_id95_')
+            setup_style_render_divs("mesh_style_0", './models/mesh_mustafa_')
+            setup_style_render_divs("mesh_style_1", './models/mesh_id98_')
+            setup_style_render_divs("mesh_style_2", './models/mesh_id97_')
+            setup_style_render_divs("mesh_style_3", './models/mesh_id95_')
         };
 
     </script>
