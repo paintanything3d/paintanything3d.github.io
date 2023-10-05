@@ -33,19 +33,19 @@
     <!-- <link rel="stylesheet" href="./static/css/avatarclip_main.css"> -->
 
     <style>
-		.render_wrapper {
-			position: relative;
+        .render_wrapper {
+            position: relative;
             height: 300px;
          }
         .render_wrapper_small {
-			position: relative;
+            position: relative;
             height: 200px;
          }
-		.render_div {
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
+        .render_div {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
         #interpolation-image-wrapper-car{
             text-align: center;
@@ -363,19 +363,19 @@
             <div class="container">
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_chair_1" class="render_div"></div>
+                        <div id="mesh_chair_1" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_chair_3" class="render_div"></div>
+                        <div id="mesh_chair_3" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_chair_2" class="render_div"></div>
+                        <div id="mesh_chair_2" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_car_1" class="render_div"></div>
+                        <div id="mesh_car_1" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_car_3" class="render_div"></div>
+                        <div id="mesh_car_3" class="render_div"></div>
                     </div>
                 </div>
                 <div style="text-align: center;">Press <b>R</b> to reset views. </div>
@@ -422,31 +422,31 @@
             <div class="container">
                 <div id="results-carousel" class="carousel results-carousel" slidesToShow=4>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_car_3" class="render_div"></div>
+                        <div id="mesh_car_3" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_chair_1" class="render_div"></div>
+                        <div id="mesh_chair_1" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_chair_2" class="render_div"></div>
+                        <div id="mesh_chair_2" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_car_1" class="render_div"></div>
+                        <div id="mesh_car_1" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_chair_3" class="render_div"></div>
+                        <div id="mesh_chair_3" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_car_2" class="render_div"></div>
+                        <div id="mesh_car_2" class="render_div"></div>
                     </div>
                     <!-- <div class="item item-steve render_wrapper">
-			            <div id="mesh_airplane_1" class="render_div"></div>
+                        <div id="mesh_airplane_1" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_airplane_2" class="render_div"></div>
+                        <div id="mesh_airplane_2" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_airplane_3" class="render_div"></div>
+                        <div id="mesh_airplane_3" class="render_div"></div>
                     </div> -->
 
                 </div>
@@ -494,19 +494,19 @@
             <div class="container">
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_car_3" class="render_div"></div>
+                        <div id="mesh_car_3" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_chair_1" class="render_div"></div>
+                        <div id="mesh_chair_1" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_chair_3" class="render_div"></div>
+                        <div id="mesh_chair_3" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_chair_2" class="render_div"></div>
+                        <div id="mesh_chair_2" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="mesh_car_1" class="render_div"></div>
+                        <div id="mesh_car_1" class="render_div"></div>
                     </div>
 
                 </div>
@@ -855,7 +855,7 @@
                         <p style="text-align:center">
                             Source code mainly borrowed from <a href="https://keunhong.com/">Keunhong Park</a>'s
                             <a href="https://nerfies.github.io/">Nerfies website</a> and
-                            <a href="https://niessnerlab.org/members/simon_giebenhain/profile.html">	Simon Giebenhain's</a> adoption for
+                            <a href="https://niessnerlab.org/members/simon_giebenhain/profile.html">    Simon Giebenhain's</a> adoption for
                             <a href="https://simongiebenhain.github.io/NPHM/">NPHM</a>.
                         </p>
                         <!-- <p style="text-align:center">
@@ -1030,7 +1030,7 @@
 
                     const mesh_geo = new THREE.Mesh( geometry, material_geo);
                     // mesh_geo.castShadow = true;
-				    //mesh_geo.receiveShadow = true;
+                    //mesh_geo.receiveShadow = true;
                     div_to_scene[div_id]["geo"].add( mesh_geo );
 
                 }, (xhr) => {
@@ -1114,44 +1114,44 @@
 
         function add_lights(scene) {
                 scene.add( new THREE.HemisphereLight( 0x443333, 0x111122 ,0.05) );
-				const spotLight = new THREE.SpotLight( 0xffffff, 0.5 );
-				spotLight.position.set( 0.0, 0.5, 1 );
-				const spotLight2 = new THREE.SpotLight( 0xffffff, 0.25 );
-			    spotLight2.position.set( -2, 0.3, -0.2 );
-				const spotLight3 = new THREE.SpotLight( 0xffffff, 0.25 );
-				spotLight3.position.set( 2, -0.3, 0.2 );
-				const spotLight4 = new THREE.SpotLight( 0xffffff, 0.25 );
-				spotLight4.position.set( 0.0, 1, -2 );
-				const spotLight5 = new THREE.SpotLight( 0xffffff, 0.05 );
-				spotLight5.position.set( 0, -2.5, -1 );
-				////spotLight.position.multiplyScalar( 700 );
-				scene.add( spotLight );
-				scene.add( spotLight2 );
-				scene.add( spotLight3 );
-				scene.add( spotLight4 );
-				scene.add( spotLight5 );
+                const spotLight = new THREE.SpotLight( 0xffffff, 0.5 );
+                spotLight.position.set( 0.0, 0.5, 1 );
+                const spotLight2 = new THREE.SpotLight( 0xffffff, 0.25 );
+                spotLight2.position.set( -2, 0.3, -0.2 );
+                const spotLight3 = new THREE.SpotLight( 0xffffff, 0.25 );
+                spotLight3.position.set( 2, -0.3, 0.2 );
+                const spotLight4 = new THREE.SpotLight( 0xffffff, 0.25 );
+                spotLight4.position.set( 0.0, 1, -2 );
+                const spotLight5 = new THREE.SpotLight( 0xffffff, 0.05 );
+                spotLight5.position.set( 0, -2.5, -1 );
+                ////spotLight.position.multiplyScalar( 700 );
+                scene.add( spotLight );
+                scene.add( spotLight2 );
+                scene.add( spotLight3 );
+                scene.add( spotLight4 );
+                scene.add( spotLight5 );
 
 
         }
 
         function add_lightsBACKUP(scene) {
                 scene.add( new THREE.HemisphereLight( 0x443333, 0x111122 ,0.05) );
-				const spotLight = new THREE.SpotLight( 0xffffff, 0.6 );
-				spotLight.position.set( 0.5, 0.5, 1 );
-				const spotLight2 = new THREE.SpotLight( 0xffffff, 0.3 );
-				spotLight2.position.set( -0.75, 0.2, 0 );
-				const spotLight3 = new THREE.SpotLight( 0xffffff, 0.3 );
-				spotLight3.position.set( -0.5, 0, 1 );
-				const spotLight4 = new THREE.SpotLight( 0xffffff, 0.3 );
-				spotLight4.position.set( 0.5, 0.5, -1 );
-				const spotLight5 = new THREE.SpotLight( 0xffffff, 0.15 );
-				spotLight5.position.set( 0, -1.5, 0 );
-				////spotLight.position.multiplyScalar( 700 );
-				scene.add( spotLight );
-				scene.add( spotLight2 );
-				//div_to_scene[div_id]["geo"].add( spotLight3 );
-				scene.add( spotLight4 );
-				scene.add( spotLight5 );
+                const spotLight = new THREE.SpotLight( 0xffffff, 0.6 );
+                spotLight.position.set( 0.5, 0.5, 1 );
+                const spotLight2 = new THREE.SpotLight( 0xffffff, 0.3 );
+                spotLight2.position.set( -0.75, 0.2, 0 );
+                const spotLight3 = new THREE.SpotLight( 0xffffff, 0.3 );
+                spotLight3.position.set( -0.5, 0, 1 );
+                const spotLight4 = new THREE.SpotLight( 0xffffff, 0.3 );
+                spotLight4.position.set( 0.5, 0.5, -1 );
+                const spotLight5 = new THREE.SpotLight( 0xffffff, 0.15 );
+                spotLight5.position.set( 0, -1.5, 0 );
+                ////spotLight.position.multiplyScalar( 700 );
+                scene.add( spotLight );
+                scene.add( spotLight2 );
+                //div_to_scene[div_id]["geo"].add( spotLight3 );
+                scene.add( spotLight4 );
+                scene.add( spotLight5 );
         }
 
         function create_style_render_div(camera, div_id, mesh_path) {
@@ -1347,15 +1347,15 @@
             //setup_render_divs("mesh_car_5", './results/mesh/male-3-casual_hybrid_0903_more_demo_.ply')
             //setup_render_divs("mesh_car_6", './results/mesh/male_outfit1_hybrid_0903_more_demo_.ply')
 
-            setup_render_divs("mesh_chair_1", './results/mesh/chair1.ply')
-            setup_render_divs("mesh_chair_2", './results/mesh/chair2.ply')
-            setup_render_divs("mesh_chair_3", './results/mesh/chair3.ply')
-            setup_render_divs("mesh_car_1", './results/mesh/car1.ply')
-            setup_render_divs("mesh_car_2", './results/mesh/car2.ply')
-            setup_render_divs("mesh_car_3", './results/mesh/car3.ply')
-            setup_render_divs("mesh_airplane_1", './results/mesh/airplane1.ply')
-            setup_render_divs("mesh_airplane_2", './results/mesh/airplane2.ply')
-            setup_render_divs("mesh_airplane_3", './results/mesh/airplane3.ply')
+            setup_render_divs("mesh_chair_1", './results/mesh/Armadillo.ply')
+            setup_render_divs("mesh_chair_2", './results/mesh/Spot.ply')
+            setup_render_divs("mesh_chair_3", './results/mesh/Stanford_bunny.ply')
+            setup_render_divs("mesh_car_1", './results/mesh/Stanford_dragon.ply')
+            setup_render_divs("mesh_car_2", './results/mesh/Suzanne.ply')
+            setup_render_divs("mesh_car_3", './results/mesh/Utah_teapot.ply')
+            // setup_render_divs("mesh_airplane_1", './results/mesh/airplane1.ply')
+            // setup_render_divs("mesh_airplane_2", './results/mesh/airplane2.ply')
+            // setup_render_divs("mesh_airplane_3", './results/mesh/airplane3.ply')
 
             
             //setup_render_divs("mesh_chair_2", './models/mesh_0079.ply')
