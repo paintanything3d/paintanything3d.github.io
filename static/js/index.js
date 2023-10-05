@@ -2,14 +2,12 @@ window.HELP_IMPROVE_VIDEOJS = false;
 window.HELP_IMPROVE_VIDEOJS = false;
 
 let INTERP_BASE = "./static/latent_interpolation/";
-let NUM_INTERP_FRAMES = 21;
-let NUM_INTERP_FRAMES_expr = 16;
-
+let NUM_INTERP_FRAMES = 26;
 
 let interp_images_chair = [];
 let interp_images_car = [];
 function preloadInterpolationImages() {
-    for (let i = 0; i < NUM_INTERP_FRAMES_expr; i++) {
+    for (let i = 0; i < NUM_INTERP_FRAMES; i++) {
         let path = INTERP_BASE + 'car/' + String(i).padStart(3, '0') + '.jpg';
         interp_images_car[i] = new Image();
         interp_images_car[i].src = path;
@@ -47,12 +45,12 @@ $(document).ready(function() {
     });
 
     let options = {
-			slidesToScroll: 2,
-			slidesToShow: 5,
-			loop: true,
+			slidesToScroll: 1,
+			slidesToShow: 4,
+			loop: false,
 			infinite: false,
             pagination: false,
-			autoplay: true,
+			autoplay: false,
 			autoplaySpeed: 3000,
     }
 
@@ -98,111 +96,7 @@ $(document).ready(function() {
     setInterpolationImageCar(0);
 
     $('#interpolation-slider-chair').prop('max', NUM_INTERP_FRAMES - 1);
-    $('#interpolation-slider-car').prop('max', NUM_INTERP_FRAMES_expr - 1);
+    $('#interpolation-slider-car').prop('max', NUM_INTERP_FRAMES - 1);
 
     bulmaSlider.attach();
 })
-
-
-
-$(window).on("load", function(){
-    // Reset gifs once everything is loaded to synchronize playback.
-    $('.preload').attr('src', function(i, a){
-        $(this).attr('src','').removeClass('preload').attr('src', a);
-    });
-
-
-    const position = { x: 0, y: 0 }
-    const positionShape = { x: 0, y: 0 }
-    const box = $('.hyper-space');
-    const boxShape = $('.hyper-space-shape');
-
-    const cursor = $('.hyper-space-cursor');
-    const cursorShape = $('.hyper-space-cursor-shape');
-    interact('.hyper-space-cursor').draggable({
-      listeners: {
-        start (event) {
-          console.log(event.type, event.target)
-        },
-        move (event) {
-          position.x += event.dx
-          position.y += event.dy
-
-          event.target.style.transform =
-            `translate(${position.x}px, ${position.y}px)`
-
-          let childPos = cursor.offset();
-          let parentPos = box.offset();
-          let childSize = cursor.outerWidth();
-          let point = {
-              x: (childPos.left - parentPos.left),
-              y: (childPos.top - parentPos.top)
-          };
-          point = {
-            x: (point.x) / (box.innerWidth() - childSize),
-            y: (point.y) / (box.innerHeight() - childSize)
-          }
-          updateHyperGrid(point);
-        },
-      },
-      modifiers: [
-        interact.modifiers.restrictRect({
-          restriction: 'parent'
-        })
-      ]
-    });
-    interact('.hyper-space-cursor-shape').draggable({
-      listeners: {
-        start (event) {
-          console.log(event.type, event.target)
-        },
-        move (event) {
-          positionShape.x += event.dx
-          positionShape.y += event.dy
-
-          event.target.style.transform =
-            `translate(${positionShape.x}px, ${positionShape.y}px)`
-
-          let childPos = cursorShape.offset();
-          let parentPos = boxShape.offset();
-          let childSize = cursorShape.outerWidth();
-          let point = {
-              x: (childPos.left - parentPos.left),
-              y: (childPos.top - parentPos.top)
-          };
-          point = {
-            x: (point.x) / (boxShape.innerWidth() - childSize),
-            y: (point.y) / (boxShape.innerHeight() - childSize)
-          }
-          updateHyperGridShape(point);
-        },
-      },
-      modifiers: [
-        interact.modifiers.restrictRect({
-          restriction: 'parent'
-        })
-      ]
-    });
-
-});
-
-Number.prototype.clamp = function(min, max) {
-  return Math.min(Math.max(this, min), max);
-};
-
-
-function updateHyperGrid(point) {
-  const n = 21 - 1;
-  let top = Math.round(n * point.y.clamp(0, 1)) * 100;
-  let left = Math.round(n * point.x.clamp(0, 1)) * 100;
-  $('.hyper-grid-rgb > img').css('left', -left + '%');
-  $('.hyper-grid-rgb > img').css('top', -top + '%');
-}
-
-function updateHyperGridShape(point) {
-  const n = 21 - 1;
-  let top = Math.round(n * point.y.clamp(0, 1)) * 100;
-  let left = Math.round(n * point.x.clamp(0, 1)) * 100;
-  $('.hyper-grid-rgb-shape > img').css('left', -left + '%');
-  $('.hyper-grid-rgb-shape > img').css('top', -top + '%');
-}
