@@ -6,7 +6,7 @@
     <meta name="description" content="Text2Tex: Text-driven Texture Synthesis via Diffusion Models">
     <meta name="keywords" content="Text2Tex, diffusion, 3D textures, 3D contents, generation">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Text2Tex: Text-driven Texture Synthesis via Diffusion Models</title>
+    <title>TextureGPT</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
@@ -63,33 +63,26 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title">Text2Tex: Text-driven Texture Synthesis via Diffusion Models</h1>
+                        <h1 class="title is-1 publication-title">TextureGPT: xxx</h1>
                         <div class="is-size-5 publication-authors">
                             <span class="author-block">
-                                <a href="https://niessnerlab.org/members/zhenyu_chen/profile.html">Dave Zhenyu Chen</a><sup>1</sup>,</span>
+                                <a href="https://flyingpig2514.github.io/">Xianfang Zeng</a><sup>1</sup>,</span>
                             <span class="author-block">
-                                <a href="https://niessnerlab.org/members/yawar_siddiqui/profile.html">Yawar Siddiqui</a><sup>1</sup>,</span>
+                                <a href="https://chenxin.tech/">Xin Chen</a><sup>1</sup>,</span>
                             <span class="author-block">
-                                <a href="https://research.snap.com/team/team-member.html#hsin-ying-lee">Hsin-Ying Lee</a><sup>2</sup>,</span>
-                            <span class="author-block">
-                                <a href="https://research.snap.com/team/team-member.html#sergey-tulyakov">Sergey Tulyakov</a><sup>2</sup>,
-                            </span>
-                            <span class="author-block">
-                                <a href="https://niessnerlab.org/members/matthias_niessner/profile.html">Matthias
-                                    Nießner</a><sup>1</sup>,
+                                <a href="https://qzq2514.github.io/"> Zhongqi Qi </a><sup>1</sup>,
                             </span>
                         </div>
 
                         <div class="is-size-5 publication-authors">
-                            <span class="author-block"><sup>1</sup>Technical University of Munich,</span>
-                            <span class="author-block"><sup>2</sup>Snap Research</span>
+                            <span class="author-block"><sup>1</sup>Tencent,</span>
                         </div>
 
                         <div class="column has-text-centered">
                             <div class="publication-links">
                                 <!-- PDF Link. -->
                                 <span class="link-block">
-                                    <a href="static/Text2Tex.pdf"
+                                    <a href="https://flyingpig2514.github.io/"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fas fa-file-pdf"></i>
@@ -98,7 +91,7 @@
                                     </a>
                                 </span>
                                 <span class="link-block">
-                                    <a class="external-link button is-normal is-rounded is-dark" href="static/Text2Tex.pdf">
+                                    <a class="external-link button is-normal is-rounded is-dark" href="https://flyingpig2514.github.io/">
                                         <span class="icon">
                                             <i class="ai ai-arxiv"></i>
                                         </span>
@@ -107,7 +100,7 @@
                                 </span>
                                 <!-- Video Link. -->
                                 <span class="link-block">
-                                    <a href="https://youtu.be/2ve8tJ9LlcA"
+                                    <a href="https://flyingpig2514.github.io/"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <svg class="svg-inline--fa fa-youtube fa-w-18" aria-hidden="true"
@@ -126,7 +119,7 @@
 
                                 <!-- Github Link. -->
                                 <span class="link-block">
-                                    <a href="https://github.com/daveredrum/Text2Tex" class="external-link button is-normal is-rounded is-dark">
+                                    <a href="https://flyingpig2514.github.io/" class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
                                         </span>
@@ -146,9 +139,13 @@
     <section class="hero teaser">
         <div class="container is-max-desktop">
             <div class="hero-body">
-                <img src="./static/teaser/teaser.jpg" width="200%" />
                 <h2 class=" subtitle has-text-centered" style="padding-top: 10px">
-                    <span class="dnerf">Text2Tex</span> generates high-quality textures for 3D meshes from the given text prompts. Our method incorporates inpainting into a pre-trained depth-aware image diffusion model to progressively synthesize high resolution partial textures from multiple viewpoints. To avoid artifacts, we propose an automatic view sequence generation scheme to determine the next best view for updating the partial texture. Extensive experiments demonstrate that our method significantly outperforms the existing text-driven approaches and GAN-based methods.
+                    placeholder for result gallery (image or video or gif)
+                </h2>
+                
+                <!-- <img src="./static/teaser/teaser.jpg" width="200%" /> -->
+                <h2 class=" subtitle has-text-centered" style="padding-top: 10px">
+                    placeholder for abstract (text)
                 </h2>
             </div>
         </div>
@@ -158,42 +155,28 @@
     <section class="section">
         <div class="container is-max-desktop">
             <!-- Abstract. -->
-            <!-- 
+            
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Abstract</h2>
-                    <div class="content has-text-justified">
-                        <p>
-                            We present Text2Tex, a novel method for generating high-quality textures for 3D meshes from the given text prompts.
-                            Our method incorporates inpainting into a pre-trained depth-aware image diffusion model to progressively synthesize high resolution partial textures from multiple viewpoints. 
-                        </p>
-
-                        <p>
-                            To avoid accumulating inconsistent and stretched artifacts across views, we dynamically segment the rendered view into a generation mask, which represents the generation status of each visible texel. 
-                            This partitioned view representation guides the depth-aware inpainting model to generate and update partial textures for the corresponding regions. 
-                        </p>
-                        
-                        <p>
-                            Furthermore, we propose an automatic view sequence generation scheme to determine the next best view for updating the partial texture.
-                        </p>
-                        
-                        <p>
-                            Extensive experiments demonstrate that our method significantly outperforms the existing text-driven approaches and GAN-based methods.
-                        </p>
-                    </div>
+                        <h2 class=" subtitle has-text-centered" style="padding-top: 10px">
+                                placeholder for Abstract (text)
+                        </h2>
                 </div>
             </div>
-             -->
+            
             <!-- Paper video. -->
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Video</h2>
                     <div class="publication-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2ve8tJ9LlcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <h2 class=" subtitle has-text-centered" style="padding-top: 10px">
+                                placeholder for video (video)
+                        </h2>
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/2ve8tJ9LlcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
                     </div>
                 </div>
             </div>
-            <!--/ Paper video. -->
         </div>
     </section>
 
@@ -202,17 +185,14 @@
         <div class="container is-max-desktop">
 
             <!-- Overview. -->
-            <div class="columns is-centered" style="margin-top: 15px">
+            <div class="columns is-centered has-text-centered" style="margin-top: 15px">
                 <div class="column is-full-width">
-                    <h2 class="title is-4">Method Overview</h2>
-                    <img src="./static/teaser/overview.jpg"/>
+                    <h2 class="title is-3">Method Overview</h2>
+                    <img src="./static/teaser/overview.png"/>
                     <div class="content has-text-justified" style="padding-top: 15px">
-                        <p>In <span class="dnerf">Text2Tex</span>, we progressively generate the texture via a generate-then-refine scheme</p>
-                        <p> In progressive texture generation, we start by rendering the object from an initial preset viewpoint. We generate a new appearance according to the input prompt via
-                            a depth-to-image diffusion model, and project the generated image back to the partial texture. Then, we repeat this process
-                            until the last preset viewpoint to output the initial textured mesh.</p>
-                        <p>In the subsequent texture refinement, we update
-                            the initial texture from a sequence of automatically selected viewpoints to refine the stretched and blurry artifacts.</p>
+                        <p>
+                       placeholder for introduction of pipline (text)
+                    </p>
                     </div>
 
                 </div>
@@ -221,126 +201,133 @@
         </div>
     </section>
 
-    <section class="hero is-light is-small">
+    <section class="section">
         <div class="hero-body">
             <div class="container">
-                <h2 class="title is-3">Textured Objaverse Objects</h2>
+                <h2 class="title is-3">Text Conditional Generation</h2>
                 
                 <div id="results-carousel" class="carousel results-carousel">
-                    <div>
-			            <div style="text-align: center; font-size: large;">Geometry </div>
-                    </div>
-                    <div>
-			            <div style="text-align: center; font-size: large;">CLIPMesh </div>
-                    </div>
-                    <div>
-			            <div style="text-align: center; font-size: large;">Latent-Paint </div>
-                    </div>
-                    <div>
-			            <div style="text-align: center; font-size: large;">Ours </div>
-                    </div>
-                </div>
-                <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve render_wrapper">
-			            <div id="compass_geo" class="render_div"></div>
+                        <div id="compass_geo" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="compass_clipmesh" class="render_div"></div>
+                        <div id="compass_clipmesh" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="compass_latentpaint" class="render_div"></div>
+                        <div id="compass_latentpaint" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="compass_ours" class="render_div"></div>
+                        <div id="compass_ours" class="render_div"></div>
                     </div>
                 </div>
 
-                <div style="text-align: center; font-size: large; height: 50px;">"a compass" </div>
+                <div id="results-carousel" class="carousel results-carousel">
 
-                
+                    <div>
+			            <div style="text-align: center; font-size: large;">Original geometry </div>
+                    </div>
+                    <div>
+			            <div style="text-align: center; font-size: large;">Prompt1:"xxx" </div>
+                    </div>
+                    <div>
+			            <div style="text-align: center; font-size: large;">Prompt2:"xxx" </div>
+                    </div>
+                    <div>
+			            <div style="text-align: center; font-size: large;">Prompt3:"xxx" </div>
+                    </div>
+                </div>
+                    <p>
+                       placeholder for introduction of text conditional generation (image or video or gif)
+                    </p>
+
             </div>
         </div>
     </section>
 
-    <section class="hero is-light is-small">
+    <section class="section">
         <div class="hero-body">
             <div class="container">
-                <h2 class="title is-3">Creative Texture Synthesis</h2>
+                <h2 class="title is-3">Image Conditional Generation</h2>
                 
                 <div id="results-carousel" class="carousel results-carousel">
-                    <div>
-			            <div style="text-align: center; font-size: large;">"baroque Porsche" </div>
-                    </div>
-                    <div>
-			            <div style="text-align: center; font-size: large;">"wooden Porsche" </div>
-                    </div>
-                    <div>
-			            <div style="text-align: center; font-size: large;">"cyberpunk Porsche" </div>
-                    </div>
-                    <div>
-			            <div style="text-align: center; font-size: large;">"Lego Porsche" </div>
-                    </div>
-                </div>
-                <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve render_wrapper">
-			            <div id="baroque_porsche" class="render_div"></div>
+                        <div id="compass_geo" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="wooden_porsche" class="render_div"></div>
+                        <div id="compass_clipmesh" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="cyberpunk_porsche" class="render_div"></div>
+                        <div id="compass_latentpaint" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="lego_porsche" class="render_div"></div>
+                        <div id="compass_ours" class="render_div"></div>
                     </div>
                 </div>
 
-                <div style="text-align: center; font-size: large; height: 50px;">Porsche in different styles </div>
-                
+                <div id="results-carousel" class="carousel results-carousel">
+
+                    <div>
+                        <div style="text-align: center; font-size: large;">Original geometry </div>
+                    </div>
+                    <div>
+                        <div style="text-align: center; font-size: large;">Prompt1:"xxx" </div>
+                    </div>
+                    <div>
+                        <div style="text-align: center; font-size: large;">Prompt2:"xxx" </div>
+                    </div>
+                    <div>
+                        <div style="text-align: center; font-size: large;">Prompt3:"xxx" </div>
+                    </div>
+                </div>
+                    <p>
+                       placeholder for introduction of Image conditional generation (image or video or gif)
+                    </p>
+
             </div>
         </div>
     </section>
 
-    <div class="row captioned_videos">
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="ex1" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                        <source data-src="./static/videos/cloth.mp4" type="video/mp4"></source>
-                    </video>
-                    <canvas height="752" class="videoMerge" id="ex1Merge" width="1002"></canvas>
+    <section class="section">
+        <div class="row captioned_videos">
+                <div class="col-4">
+                    <div class="video-compare-container" style="width: 100%">
+                        <video class="video lazy" id="ex1" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                            <source data-src="./static/videos/cloth.mp4" type="video/mp4"></source>
+                        </video>
+                        <canvas height="752" class="videoMerge" id="ex1Merge" width="1002"></canvas>
+                    </div>
+                    <h6 class="caption">Flying Dragon, highly detailed, breathing fire</h6>
                 </div>
-                <h6 class="caption">Flying Dragon, highly detailed, breathing fire</h6>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="ex2" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                        <source data-src="./static/videos/cloth.mp4" type="video/mp4"></source>
-                    </video>
-                    <canvas height="752" class="videoMerge" id="ex2Merge" width="1002"></canvas>
+                <div class="col-4">
+                    <div class="video-compare-container" style="width: 100%">
+                        <video class="video lazy" id="ex2" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                            <source data-src="./static/videos/cloth.mp4" type="video/mp4"></source>
+                        </video>
+                        <canvas height="752" class="videoMerge" id="ex2Merge" width="1002"></canvas>
+                    </div>
+                    <h6 class="caption">Viking axe, fantasy, weapon, blender, 8k, HD</h6>
                 </div>
-                <h6 class="caption">Viking axe, fantasy, weapon, blender, 8k, HD</h6>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="ex3" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                        <source data-src="./static/videos/cloth.mp4" type="video/mp4"></source>
-                    </video>
-                    <canvas height="752" class="videoMerge" id="ex3Merge" width="1002"></canvas>
+                <div class="col-4">
+                    <div class="video-compare-container" style="width: 100%">
+                        <video class="video lazy" id="ex3" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                            <source data-src="./static/videos/cloth.mp4" type="video/mp4"></source>
+                        </video>
+                        <canvas height="752" class="videoMerge" id="ex3Merge" width="1002"></canvas>
+                    </div>
+                    <h6 class="caption">mecha vampire girl chibi</h6>
                 </div>
-                <h6 class="caption">mecha vampire girl chibi</h6>
             </div>
-        </div>
+    </section>
 
     <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
             <h2 class="title">BibTeX</h2>
             <pre>
     <code>
-    @article{chen2023text2tex,
-        title={Text2Tex: Text-driven Texture Synthesis via Diffusion Models},
-        author={Chen, Dave Zhenyu and Siddiqui, Yawar and Lee, Hsin-Ying and Tulyakov, Sergey and Nie{\ss}ner, Matthias},
-        journal={arXiv preprint arXiv:2303.11396},
+    @article{Zeng2023textgpt,
+        title={TextureGPT: xxx},
+        author={XianFang Zeng, Xin Chen and Zhongqi Qi},
+        journal={CVPR},
         year={2023},
     }
     </code>
@@ -351,10 +338,10 @@
     <footer class="footer">
         <div class="container">
             <div class="content has-text-centered">
-                <a class="icon-link" href="static/Text2Tex.pdf">
+                <a class="icon-link" href="https://flyingpig2514.github.io/">
                     <i class="fas fa-file-pdf"></i>
                 </a>
-                <a class="icon-link" href="https://github.com/daveredrum" class="external-link" disabled>
+                <a class="icon-link" href="https://flyingpig2514.github.io/" class="external-link" disabled>
                     <i class="fab fa-github"></i>
                 </a>
             </div>
@@ -362,12 +349,11 @@
                 <div class="column is-8">
                     <div class="content">
                         <p style="text-align:center">
-                            Source code mainly borrowed from <a href="https://niessnerlab.org/members/yawar_siddiqui/profile.html">Yawar Siddiqui</a>'s <a
-                                href="https://nihalsid.github.io/texturify/">Texturify website</a>.
+                            Source code mainly borrowed from <a href="https://mv-dream.github.io/">MVDream</a> and <a href="https://daveredrum.github.io/Text2Tex/">Text2Tex</a>
                         </p>
-                        <p style="text-align:center">
+                        <!-- <p style="text-align:center">
                             Please contact <a href="https://niessnerlab.org/members/zhenyu_chen/profile.html">Dave Zhenyu Chen</a> for feedback and questions.
-                        </p>
+                        </p> -->
 
                     </div>
                 </div>
