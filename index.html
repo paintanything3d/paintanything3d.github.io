@@ -177,6 +177,14 @@
             }
         }
     </script> 
+
+
+    <!-- scripts and css for MVDream -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/styles.css">
+    <script src="./static/js/video_comparison.js"></script>
+
+
 </head>
 
 <body>
@@ -293,96 +301,6 @@
             </div>
         </div>
     </section>
-<!-- 
-    
-    <section class="hero is-light is-small">
-        <div class="hero-body">
-        <div class="container">
-            <div id="results-carousel" class="carousel results-carousel">
-            <div class="item item-chair-tp">
-                <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                <source src="./results/recon/both/female_outfit1_novel_view.mp4"
-                        type="video/mp4">
-                </video>
-            </div>
-            <div class="item item-chair-tp">
-                <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                <source src="./results/recon/both/DSC_7157_novel_view.mp4"
-                        type="video/mp4">
-                </video>
-            </div>
-            <div class="item item-chair-tp">
-                <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                <source src="./results/recon/both/male_outfit1_novel_view.mp4"
-                        type="video/mp4">
-                </video>
-            </div>
-            <div class="item item-chair-tp">
-                <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                <source src="./results/recon/both/DSC_7147_novel_view.mp4"
-                        type="video/mp4">
-                </video>
-            </div>
-            <div class="item item-chair-tp">
-                <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                <source src="./results/recon/both/DSC_7153_novel_view.mp4"
-                        type="video/mp4">
-                </video>
-            </div>
-            <div class="item item-chair-tp">
-                <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                <source src="./results/recon/both/DSC_7160_novel_view.mp4"
-                        type="video/mp4">
-                </video>
-            </div>
-            <div class="item item-chair-tp">
-                <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                <source src="./results/recon/both/subject_016_outfit_1_motion_1_novel_view.mp4"
-                        type="video/mp4">
-                </video>
-            </div>
-            <div class="item item-chair-tp">
-                <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                <source src="./results/recon/both/subject_022_outfit_1_motion_1_novel_view.mp4"
-                        type="video/mp4">
-                </video>
-            </div>
-            <div class="item item-chair-tp">
-                <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                <source src="./results/recon/both/subject_023_outfit_1_motion_1_novel_view.mp4"
-                        type="video/mp4">
-                </video>
-            </div>
-            </div>
-        </div>
-        </div>
-    </section> -->
-  
-<!-- 
-    <section class="hero is-light is-small">
-        <div class="hero-body">
-            <div class="container">
-                <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-steve render_wrapper">
-                        <div id="mesh_chair_1" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="mesh_chair_3" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="mesh_chair_2" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="mesh_car_1" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="mesh_car_3" class="render_div"></div>
-                    </div>
-                </div>
-                <div style="text-align: center;">Press <b>R</b> to reset views. </div>
-            </div>
-        </div>
-    </section> -->
 
 
     <section class="section">
@@ -403,18 +321,14 @@
                 </div>
 
             </div>
+            </div>
 
         </div>
+
     </section>
 
     <section class="section">
         <div class="container is-max-desktop">
-            <!-- <div class="content has-text-justified">
-                <h1 class="title is-4">Results</h1>
-                <p>
-                    placeholder for introduction of our generation (text)
-                  </p>
-            </div> -->
             <br>
             <div class="content has-text-justified">
                 <h2 class="title is-4">Text Conditional Generation</h2>
@@ -462,7 +376,7 @@
             <div class="content has-text-justified">
                 <h2 class="title is-4">Tools-3D show....</h2>
                 <div class="container">
-                <div id="results-carousel" class="carousel results-carousel" slidesToShow=4>
+                <div id="results-carousel" class="carousel results-carousel" slidesToShow=3>
                     <div class="item item-steve render_wrapper">
                         <div id="mesh_car_3" class="render_div"></div>
                     </div>
@@ -484,10 +398,45 @@
 
                 </div>
                 <div style="text-align: center;">Press <b>R</b> to reset views. </div>
+                </div>
             </div>
-            </div>
-            
 
+            <div class="content has-text-justified">
+                <h2 class="title is-4">Tools-Slider Comparer....</h2>
+                <div class="row captioned_videos">
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex1" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/videos/cloth.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex1Merge" width="1002"></canvas>
+                </div>
+                <h6 class="caption">prompt1:xxx</h6>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex2" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/videos/cloth.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex2Merge" width="1002"></canvas>
+                </div>
+                <h6 class="caption">prompt2:xxx</h6>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex3" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/videos/cloth.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex3Merge" width="1002"></canvas>
+                </div>
+                <h6 class="caption">prompt3:xxx</h6>
+            </div>
+        </div>
+            </div>
+
+
+
+            
         </div>
     </section>
 
@@ -1377,6 +1326,17 @@
         /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
         initComparisons();
     </script>
+
+    <!-- scripts and css for MVDream -->
+    <script src="./static/js/yall.js"></script>
+    <script>
+        yall(
+            {
+                observeChanges: true
+            }
+        );
+    </script>
+
 </body>
 
 </html>
