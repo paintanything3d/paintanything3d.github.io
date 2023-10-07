@@ -524,9 +524,12 @@
             else if (div_name.includes("ambulance")) {
                 camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
             }
-            // else if (div_name.includes("backpack")) {
-            //     camera_init_position = new THREE.Vector3( -1.5, 0.5, 1.5 );
-            // }
+            else if (div_name.includes("backpack")) {
+                camera_init_position = new THREE.Vector3( -1.5, 0.5, 1.5 );
+            }
+            if (div_name.includes("dumpster")){
+                camera_init_position = new THREE.Vector3( 1, 1.5, 1 );
+            }
             camera.position.set(camera_init_position.x, camera_init_position.y, camera_init_position.z);
             return camera;
         }
@@ -676,8 +679,8 @@
             slider.removeAttribute("tabIndex")
             // slider.addEventListener("mouseout", reset_orbit_controls);
 
-            // const qualitative = ["compass", "ambulance", "backpack", "dumpster"];
-            const qualitative = ["compass", "ambulance"];
+            const qualitative = ["compass", "ambulance", "backpack", "dumpster"];
+            // const qualitative = ["compass", "ambulance"];
 
             qualitative.forEach(element => {
                 setup_render_divs(element+"_geo", element,
