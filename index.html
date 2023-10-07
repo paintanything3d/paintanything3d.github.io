@@ -681,13 +681,8 @@
                 );
             });
 
-            setup_render_divs("baroque_porsche", "baroque",
-                './samples/different_style/mesh1.obj', 
-                './samples/different_style/mesh1.mtl', 
-                './samples/different_style/albedo.png'
-                );
 
-            const styles = [, "wooden", "cyberpunk", "lego"];
+            const styles = ["baroque", "wooden", "cyberpunk", "lego"];
             styles.forEach(element => {
                 setup_render_divs(element+"_porsche", element,
                 './samples/different_style/'+element+'_porsche/mesh_normalized.obj', 
