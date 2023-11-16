@@ -6,7 +6,7 @@
     <meta name="description" content="Text2Tex: Text-driven Texture Synthesis via Diffusion Models">
     <meta name="keywords" content="Text2Tex, diffusion, 3D textures, 3D contents, generation">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TextureGPT</title>
+    <title>Paint3D</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
@@ -63,8 +63,8 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title">TextureGPT: xxx</h1>
-                        <div class="is-size-5 publication-authors">
+                        <h1 class="title is-1 publication-title">Paint3D: Paint Anything 3D with Lighting-less Texture Diffusion Models</h1>
+                        <!-- <div class="is-size-5 publication-authors">
                             <span class="author-block">
                                 <a href="https://flyingpig2514.github.io/">Xianfang Zeng</a><sup>1</sup>,</span>
                             <span class="author-block">
@@ -76,12 +76,18 @@
 
                         <div class="is-size-5 publication-authors">
                             <span class="author-block"><sup>1</sup>Tencent,</span>
+                        </div> -->
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                Anoymous</span>
+                            <span class="author-block">
                         </div>
 
                         <div class="column has-text-centered">
                             <div class="publication-links">
                                 <!-- PDF Link. -->
-                                <span class="link-block">
+                                <!-- <span class="link-block">
                                     <a href="https://flyingpig2514.github.io/"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
@@ -89,17 +95,17 @@
                                         </span>
                                         <span>Paper</span>
                                     </a>
-                                </span>
-                                <span class="link-block">
+                                </span> -->
+                                <!-- <span class="link-block">
                                     <a class="external-link button is-normal is-rounded is-dark" href="https://flyingpig2514.github.io/">
                                         <span class="icon">
                                             <i class="ai ai-arxiv"></i>
                                         </span>
                                         <span>arXiv</span>
                                     </a>
-                                </span>
+                                </span> -->
                                 <!-- Video Link. -->
-                                <span class="link-block">
+                                <!-- <span class="link-block">
                                     <a href="https://flyingpig2514.github.io/"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
@@ -110,22 +116,22 @@
                                                 <path fill="currentColor"
                                                     d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
                                                 </path>
-                                            </svg><!-- <i class="fab fa-youtube"></i> Font Awesome fontawesome.com -->
+                                            </svg>
                                         </span>
                                         <span>Video</span>
                                     </a>
-                                </span>
+                                </span> -->
 
 
                                 <!-- Github Link. -->
-                                <span class="link-block">
+                                <!-- <span class="link-block">
                                     <a href="https://flyingpig2514.github.io/" class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
                                         </span>
                                         <span>Code</span>
                                     </a>
-                                </span>
+                                </span> -->
                                 <!-- Dataset Link. -->
                                 <span class="link-block"></span>
                             </div>
@@ -139,13 +145,13 @@
     <section class="hero teaser">
         <div class="container is-max-desktop">
             <div class="hero-body">
-                <h2 class=" subtitle has-text-centered" style="padding-top: 10px">
+                <!-- <h2 class=" subtitle has-text-centered" style="padding-top: 10px">
                     placeholder for result gallery (image or video or gif)
-                </h2>
+                </h2> -->
                 
                 <img src="./static/teaser/teaser.png" width="200%" />
                 <h2 class=" subtitle has-text-centered" style="padding-top: 10px">
-                    placeholder for abstract (text)
+                    The advancement of image diffusion models has significantly propelled the evolution of 3D content generation, particularly in texturing 3D objects for game productions. Utilizing pre-trained image models presents a foundational approach, yet they often suffer from these pre-illuminated textures chasing lighting conditions in 3D rendering engines. Meanwhile, generative texture models without billion-scale image pre-trainings often struggle with the generalization across the limited size of 3D datasets. To address these challenges, we propose Paint3D, a coarse-to-fine lighting-less texture synthesis framework to leverage pre-trained image generative models for both text-to-texture and image-to-texture generations. Specifically, we first generate a coarse texture map through multi-view image sampling from pre-trained image diffusion models, followed by back-projection onto the 3D model's surface. In the refinement stage, we train a shape-aware diffusion model in UV space, aimed at achieving free illumination, inpainting, and high definition for the completeness and visual appeal of final texture maps. Extensive experiments demonstrate that Paint3D achieves state-of-the-art performance for texturing 3D objects while maintaining the adaptation to pre-existing strong text-to-image or image-to-image models, thereby significantly enriching 3D assets.
                 </h2>
             </div>
         </div>
@@ -156,27 +162,27 @@
         <div class="container is-max-desktop">
             <!-- Abstract. -->
             
-            <div class="columns is-centered has-text-centered">
+            <!-- <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Abstract</h2>
                         <h2 class=" subtitle has-text-centered" style="padding-top: 10px">
                                 placeholder for Abstract (text)
                         </h2>
                 </div>
-            </div>
+            </div> -->
             
             <!-- Paper video. -->
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
+            <!-- <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths"> 
                     <h2 class="title is-3">Video</h2>
                     <div class="publication-video">
                         <h2 class=" subtitle has-text-centered" style="padding-top: 10px">
                                 placeholder for video (video)
                         </h2>
-                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/2ve8tJ9LlcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2ve8tJ9LlcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!--/ Paper video. -->
         </div>
     </section>
