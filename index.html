@@ -167,9 +167,9 @@
                 </div>
                 
                 <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-steve render_wrapper">
-			            <!-- <img src="./static/img/image_prompt_fighter.png" width="100%" /> -->
-                        <div id="ambulance_geo" class="render_div"></div>
+                    <div class="item item-steve">
+			            <img src="./static/img/image_prompt_fighter.png" width="100%" />
+                        <!-- <div id="ambulance_geo" class="render_div"></div> -->
                     </div>
                     <div class="item item-steve render_wrapper">
 			            <div id="ambulance_clipmesh" class="render_div"></div>
@@ -543,11 +543,14 @@
             const qualitative = ["compass", "ambulance"];
 
             qualitative.forEach(element => {
-                setup_render_divs(element+"_geo", element,
-                './samples/qualitative/'+element+'/geo/mesh_normalized.obj', 
-                './samples/qualitative/'+element+'/geo/mesh_normalized.mtl', 
-                './samples/qualitative/'+element+'/geo/mesh_normalized.png'
-                );
+                if (element.includes("compass")){
+                    setup_render_divs(element+"_geo", element,
+                    './samples/qualitative/'+element+'/geo/mesh_normalized.obj', 
+                    './samples/qualitative/'+element+'/geo/mesh_normalized.mtl', 
+                    './samples/qualitative/'+element+'/geo/mesh_normalized.png'
+                    );
+                }
+                
                 setup_render_divs(element+"_clipmesh", element,
                     './samples/qualitative/'+element+'/clipmesh/mesh_normalized.obj', 
                     './samples/qualitative/'+element+'/clipmesh/mesh_normalized.mtl', 
