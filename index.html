@@ -84,7 +84,7 @@
                     placeholder for result gallery (image or video or gif)
                 </h2> -->
                 
-                <img src="./static/teaser/teaser.png" width="200%" />
+                <img src="./static/imgs/teaser.png" width="200%" />
                 <h2 class=" subtitle has-text-centered" style="padding-top: 10px">
                      We propose Paint3D, a coarse-to-fine lighting-less texture synthesis framework to leverage pre-trained image generative models for both text-to-texture and image-to-texture generations. Specifically, we first generate a coarse texture map through multi-view image sampling from pre-trained image diffusion models, followed by back-projection onto the 3D model's surface. In the refinement stage, we train a shape-aware diffusion model in UV space, aimed at achieving free illumination, inpainting, and high definition for the completeness and visual appeal of final texture maps. Extensive experiments demonstrate that Paint3D achieves state-of-the-art performance for texturing 3D objects while maintaining the adaptation to pre-existing strong text-to-image or image-to-image models, thereby significantly enriching 3D assets.
                 </h2>
@@ -100,7 +100,7 @@
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
                     <h2 class="title is-3">Method Overview</h2>
-                    <img src="./static/teaser/overview.png"/>
+                    <img src="./static/imgs/overview.png"/>
                     <div class="content has-text-justified">
                         <p>
                        The overview of our coarse-to-fine framework. The coarse stage samples multi-view images from the pre-trained 2D image diffusion models, then back-projects these images onto the mesh surface to create initial texture maps. The refinement stage generates high-quality textures with a diffusion model in UV space, conditioned on the position map and the coarse texture map.
@@ -180,7 +180,7 @@
                 
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve">
-                        <img src="./static/img/image_prompt_chair.jpg" width="100%" />
+                        <img src="./static/imgs/image_prompt_chair.jpg" width="100%" />
                     </div>
                     <div class="item item-steve render_wrapper">
                         <div id="imgCond1_col2" class="render_div"></div>
@@ -195,7 +195,7 @@
 
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve">
-                        <img src="./static/img/image_prompt_chair.jpg" width="100%" />
+                        <img src="./static/imgs/image_prompt_fighter.png" width="100%" />
                     </div>
                     <div class="item item-steve render_wrapper">
                         <div id="imgCond2_col2" class="render_div"></div>
