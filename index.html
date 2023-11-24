@@ -115,7 +115,7 @@
         <div class="container is-max-desktop">
             <div class="container">
                 <h2 class="title is-3">Conditional Generation</h2>
-                <h2 class="title is-4">Text Conditional Generation</h2>
+                <h2 class="title is-4">Text Conditional Generation1</h2>
                 <div id="results-carousel" class="carousel results-carousel">
                     <div>
                         <div style="text-align: center; font-size: large;">Latent-Paint </div>
@@ -133,16 +133,16 @@
 
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve render_wrapper">
-                        <div id="compass_geo" class="render_div"></div>
+                        <div id="textCond1_geo" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="compass_clipmesh" class="render_div"></div>
+                        <div id="textCond1_clipmesh" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="compass_latentpaint" class="render_div"></div>
+                        <div id="textCond1_latentpaint" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="compass_ours" class="render_div"></div>
+                        <div id="textCond1_ours" class="render_div"></div>
                     </div>
                 </div>
 
@@ -335,7 +335,7 @@
         import { MTLLoader } from './js/MTLLoader.js';
         import { OrbitControls } from './js/OrbitControls.js'
         let div_to_scene = {
-            "compass": {},
+            "textCond1": {},
             "imgCond1": {},
             "backpack": {},
             "dumpster": {},
@@ -349,7 +349,7 @@
             "sheep": {}
         };
         let div_camera = {
-            "compass": null,
+            "textCond1": null,
             "imgCond1": null,
             "backpack": null,
             "dumpster": null,
@@ -376,7 +376,7 @@
             console.log(width, height)
             let camera = new THREE.PerspectiveCamera( 35, width / height, 0.1, 50 );
             let camera_init_position = new THREE.Vector3( -1, 0.5, 1 );
-            if (div_name.includes("compass")){
+            if (div_name.includes("textCond1")){
                 camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
             }
             else if (div_name.includes("imgCond1")) {
@@ -534,11 +534,10 @@
             slider.removeAttribute("tabIndex")
             // slider.addEventListener("mouseout", reset_orbit_controls);
 
-            // const qualitative = ["compass", "ambulance", "backpack", "dumpster"];
-            const qualitative = ["compass", "imgCond1"];
+            const qualitative = ["textCond1", "imgCond1"];
 
             qualitative.forEach(element => {
-                if (element.includes("compass")){
+                if (element.includes("textCond1")){
                     setup_render_divs(element+"_geo", element,
                     './samples/qualitative/'+element+'/geo/mesh_normalized.obj', 
                     './samples/qualitative/'+element+'/geo/mesh_normalized.mtl', 
