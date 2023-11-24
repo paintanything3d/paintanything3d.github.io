@@ -148,7 +148,7 @@
 
                  <div style="text-align: center; font-size: large; height: 50px;">  </div>
                 
-                <h2 class="title is-4">Image Conditional Generation</h2>
+                <h2 class="title is-4">Image Conditional Generation2</h2>
                 <div id="results-carousel" class="carousel results-carousel">
                     <div>
                         <div style="text-align: center; font-size: large;">Conditional Image</div>
@@ -167,24 +167,21 @@
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve">
                         <img src="./static/img/image_prompt_chair.jpg" width="100%" />
-                        <!-- <div id="ambulance_geo" class="render_div"></div> -->
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="ambulance_clipmesh" class="render_div"></div>
+                        <div id="imgCond1_clipmesh" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="ambulance_latentpaint" class="render_div"></div>
+                        <div id="imgCond1_latentpaint" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="ambulance_ours" class="render_div"></div>
+                        <div id="imgCond1_ours" class="render_div"></div>
                     </div>
                 </div>
-            
-                <!-- <div style="text-align: center;">"an ambulance" </div>  -->
                 
                  <!-- <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve render_wrapper">
-                        <div id="backpack_geo" class="render_div"></div>
+                        <img src="./static/img/image_prompt_fighter.png" width="100%" />
                     </div>
                     <div class="item item-steve render_wrapper">
                         <div id="backpack_clipmesh" class="render_div"></div>
@@ -339,7 +336,7 @@
         import { OrbitControls } from './js/OrbitControls.js'
         let div_to_scene = {
             "compass": {},
-            "ambulance": {},
+            "imgCond1": {},
             "backpack": {},
             "dumpster": {},
             "baroque": {}, 
@@ -353,7 +350,7 @@
         };
         let div_camera = {
             "compass": null,
-            "ambulance": null,
+            "imgCond1": null,
             "backpack": null,
             "dumpster": null,
             "baroque": null,
@@ -382,7 +379,7 @@
             if (div_name.includes("compass")){
                 camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
             }
-            else if (div_name.includes("ambulance")) {
+            else if (div_name.includes("imgCond1")) {
                 camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
             }
             else if (div_name.includes("backpack")) {
@@ -538,7 +535,7 @@
             // slider.addEventListener("mouseout", reset_orbit_controls);
 
             // const qualitative = ["compass", "ambulance", "backpack", "dumpster"];
-            const qualitative = ["compass", "ambulance"];
+            const qualitative = ["compass", "imgCond1"];
 
             qualitative.forEach(element => {
                 if (element.includes("compass")){
