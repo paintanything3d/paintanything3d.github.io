@@ -19,19 +19,19 @@
     <link rel="stylesheet" href="./static/css/index.css">
 
     <style>
-		.render_wrapper {
-			position: relative;
+        .render_wrapper {
+            position: relative;
             height: 300px;
          }
         .render_wrapper_small {
-			position: relative;
+            position: relative;
             height: 200px;
          }
-		.render_div {
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
+        .render_div {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
         #interpolation-image-wrapper-car{
             text-align: center;
@@ -135,16 +135,16 @@
 
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve render_wrapper">
-			            <div id="compass_geo" class="render_div"></div>
+                        <div id="compass_geo" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="compass_clipmesh" class="render_div"></div>
+                        <div id="compass_clipmesh" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="compass_latentpaint" class="render_div"></div>
+                        <div id="compass_latentpaint" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="compass_ours" class="render_div"></div>
+                        <div id="compass_ours" class="render_div"></div>
                     </div>
                 </div>
 
@@ -166,51 +166,53 @@
                     </div>
                 </div>
                 
-                <!-- <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-steve">
-			            <img src="./static/img/image_prompt_fighter.png" width="100%" />
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item item-steve render_wrapper">
+                        <!-- <img src="./static/img/image_prompt_fighter.png" width="100%" /> -->
+                        <div id="ambulance_geo" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="ambulance_clipmesh" class="render_div"></div>
+                        <div id="ambulance_clipmesh" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="ambulance_latentpaint" class="render_div"></div>
+                        <div id="ambulance_latentpaint" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="ambulance_ours" class="render_div"></div>
-                    </div>
-                </div> -->
-            
-                
-                 <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-steve">
-                        <img src="./static/img/image_prompt_chair.jpg" width="100%" />
-                    </div>
-                    <div class="item item-steve render_wrapper">
-			            <div id="backpack_clipmesh" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-			            <div id="backpack_latentpaint" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-			            <div id="backpack_ours" class="render_div"></div>
+                        <div id="ambulance_ours" class="render_div"></div>
                     </div>
                 </div>
+            
+                <!-- <div style="text-align: center;">"an ambulance" </div>  -->
+                
+                 <!-- <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item item-steve render_wrapper">
+                        <div id="backpack_geo" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+                        <div id="backpack_clipmesh" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+                        <div id="backpack_latentpaint" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+                        <div id="backpack_ours" class="render_div"></div>
+                    </div>
+                </div> -->
 
                 <!-- <div style="text-align: center;">"a backpack" </div>  -->
 
                 <!-- <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve render_wrapper">
-			            <div id="dumpster_geo" class="render_div"></div>
+                        <div id="dumpster_geo" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="dumpster_clipmesh" class="render_div"></div>
+                        <div id="dumpster_clipmesh" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="dumpster_latentpaint" class="render_div"></div>
+                        <div id="dumpster_latentpaint" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-			            <div id="dumpster_ours" class="render_div"></div>
+                        <div id="dumpster_ours" class="render_div"></div>
                     </div>
                 </div>
 
@@ -538,17 +540,14 @@
             // slider.addEventListener("mouseout", reset_orbit_controls);
 
             // const qualitative = ["compass", "ambulance", "backpack", "dumpster"];
-            const qualitative = ["compass", "ambulance", "backpack"];
+            const qualitative = ["compass", "ambulance"];
 
             qualitative.forEach(element => {
-                if (element.includes("compass")){
-                    setup_render_divs(element+"_geo", element,
-                    './samples/qualitative/'+element+'/geo/mesh_normalized.obj', 
-                    './samples/qualitative/'+element+'/geo/mesh_normalized.mtl', 
-                    './samples/qualitative/'+element+'/geo/mesh_normalized.png'
-                    );
-                }
-                
+                setup_render_divs(element+"_geo", element,
+                './samples/qualitative/'+element+'/geo/mesh_normalized.obj', 
+                './samples/qualitative/'+element+'/geo/mesh_normalized.mtl', 
+                './samples/qualitative/'+element+'/geo/mesh_normalized.png'
+                );
                 setup_render_divs(element+"_clipmesh", element,
                     './samples/qualitative/'+element+'/clipmesh/mesh_normalized.obj', 
                     './samples/qualitative/'+element+'/clipmesh/mesh_normalized.mtl', 
