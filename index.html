@@ -148,7 +148,7 @@
 
                  <div style="text-align: center; font-size: large; height: 50px;">  </div>
                 
-                <h2 class="title is-4">Image Conditional Generation3</h2>
+                <h2 class="title is-4">Image Conditional Generation4</h2>
                 <div id="results-carousel" class="carousel results-carousel">
                     <div>
                         <div style="text-align: center; font-size: large;">Conditional Image</div>
@@ -179,6 +179,21 @@
                     </div>
                 </div>
                 
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item item-steve">
+                        <img src="./static/img/image_prompt_chair.jpg" width="100%" />
+                    </div>
+                    <div class="item item-steve render_wrapper">
+                        <div id="imgCond2_clipmesh" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+                        <div id="imgCond2_latentpaint" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+                        <div id="imgCond2_ours" class="render_div"></div>
+                    </div>
+                </div>
+
                  <!-- <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve render_wrapper">
                         <img src="./static/img/image_prompt_fighter.png" width="100%" />
@@ -337,6 +352,7 @@
         let div_to_scene = {
             "textCond1": {},
             "imgCond1": {},
+            "imgCond2": {},
             "backpack": {},
             "dumpster": {},
             "baroque": {}, 
@@ -351,6 +367,7 @@
         let div_camera = {
             "textCond1": null,
             "imgCond1": null,
+            "imgCond2": null,
             "backpack": null,
             "dumpster": null,
             "baroque": null,
@@ -380,6 +397,9 @@
                 camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
             }
             else if (div_name.includes("imgCond1")) {
+                camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
+            }
+            else if (div_name.includes("imgCond2")) {
                 camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
             }
             else if (div_name.includes("backpack")) {
@@ -534,7 +554,7 @@
             slider.removeAttribute("tabIndex")
             // slider.addEventListener("mouseout", reset_orbit_controls);
 
-            const qualitative = ["textCond1", "imgCond1"];
+            const qualitative = ["textCond1", "imgCond1", "imgCond2"];
 
             qualitative.forEach(element => {
                 if (element.includes("textCond1")){
