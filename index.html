@@ -133,37 +133,22 @@
 
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve render_wrapper">
-                        <div id="textCond1_geo" class="render_div"></div>
+                        <div id="compass_geo" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="textCond1_clipmesh" class="render_div"></div>
+                        <div id="compass_clipmesh" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="textCond1_latentpaint" class="render_div"></div>
+                        <div id="compass_latentpaint" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="textCond1_ours" class="render_div"></div>
+                        <div id="compass_ours" class="render_div"></div>
                     </div>
                 </div>
 
-                 <!-- <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-steve render_wrapper">
-                        <div id="textCond2_geo" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="textCond2_clipmesh" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="textCond2_latentpaint" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="textCond2_ours" class="render_div"></div>
-                    </div>
-                </div> -->
-
-                 <div style="text-align: center; font-size: large; height: 40px;">  </div>
+                 <div style="text-align: center; font-size: large; height: 50px;">  </div>
                 
-                <h2 class="title is-4">Image Conditional Generation2</h2>
+                <h2 class="title is-4">Image Conditional Generation</h2>
                 <div id="results-carousel" class="carousel results-carousel">
                     <div>
                         <div style="text-align: center; font-size: large;">Conditional Image</div>
@@ -185,46 +170,52 @@
                         <!-- <div id="ambulance_geo" class="render_div"></div> -->
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="imgCond1_clipmesh" class="render_div"></div>
+                        <div id="ambulance_clipmesh" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="imgCond1_latentpaint" class="render_div"></div>
+                        <div id="ambulance_latentpaint" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="imgCond1_ours" class="render_div"></div>
+                        <div id="ambulance_ours" class="render_div"></div>
                     </div>
                 </div>
             
+                <!-- <div style="text-align: center;">"an ambulance" </div>  -->
+                
+                 <!-- <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item item-steve render_wrapper">
+                        <div id="backpack_geo" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+                        <div id="backpack_clipmesh" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+                        <div id="backpack_latentpaint" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+                        <div id="backpack_ours" class="render_div"></div>
+                    </div>
+                </div> -->
+
+                <!-- <div style="text-align: center;">"a backpack" </div>  -->
+
                 <!-- <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-steve">
-                        <img src="./static/img/image_prompt_chair.jpg" width="100%" />
+                    <div class="item item-steve render_wrapper">
+                        <div id="dumpster_geo" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="ambulance_clipmesh" class="render_div"></div>
+                        <div id="dumpster_clipmesh" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="ambulance_latentpaint" class="render_div"></div>
+                        <div id="dumpster_latentpaint" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="ambulance_ours" class="render_div"></div>
+                        <div id="dumpster_ours" class="render_div"></div>
                     </div>
                 </div>
 
-                <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-steve">
-                        <img src="./static/img/image_prompt_chair.jpg" width="100%" />
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="ambulance_clipmesh" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="ambulance_latentpaint" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="ambulance_ours" class="render_div"></div>
-                    </div>
-                </div> -->
-            </div> 
+                <div style="text-align: center;">"a dumpster" </div> 
+            </div> -->
         </div>
     </section>
 
@@ -347,9 +338,8 @@
         import { MTLLoader } from './js/MTLLoader.js';
         import { OrbitControls } from './js/OrbitControls.js'
         let div_to_scene = {
-            "textCond1": {},
-            "textCond2": {},
-            "imgCond1": {},
+            "compass": {},
+            "ambulance": {},
             "backpack": {},
             "dumpster": {},
             "baroque": {}, 
@@ -362,9 +352,8 @@
             "sheep": {}
         };
         let div_camera = {
-            "textCond1": null,
-            "textCond2": null,
-            "imgCond1": null,
+            "compass": null,
+            "ambulance": null,
             "backpack": null,
             "dumpster": null,
             "baroque": null,
@@ -390,11 +379,14 @@
             console.log(width, height)
             let camera = new THREE.PerspectiveCamera( 35, width / height, 0.1, 50 );
             let camera_init_position = new THREE.Vector3( -1, 0.5, 1 );
-            if (div_name.includes("textCond")){
+            if (div_name.includes("compass")){
                 camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
             }
-            else if (div_name.includes("imgCond")) {
+            else if (div_name.includes("ambulance")) {
                 camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
+            }
+            else if (div_name.includes("backpack")) {
+                camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1  );
             }
             camera.position.set(camera_init_position.x, camera_init_position.y, camera_init_position.z);
             return camera;
@@ -545,11 +537,11 @@
             slider.removeAttribute("tabIndex")
             // slider.addEventListener("mouseout", reset_orbit_controls);
 
-            // const qualitative = ["textCond1", "textCond2", "ambulance"];
-            const qualitative = ["textCond1", "textCond2", "imgCond1"];
+            // const qualitative = ["compass", "ambulance", "backpack", "dumpster"];
+            const qualitative = ["compass", "ambulance"];
 
             qualitative.forEach(element => {
-                if (element.includes("textCond")){
+                if (element.includes("compass")){
                     setup_render_divs(element+"_geo", element,
                     './samples/qualitative/'+element+'/geo/mesh_normalized.obj', 
                     './samples/qualitative/'+element+'/geo/mesh_normalized.mtl', 
