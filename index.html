@@ -116,9 +116,6 @@
             <div class="container">
                 <h2 class="title is-3">Conditional Generation</h2>
                 <h2 class="title is-4">Text Conditional Generation</h2>
-                <div style="text-align: center">
-                    <img src="./static/teaser/compare.jpg" width="80%"/> 
-                </div>
                 <div id="results-carousel" class="carousel results-carousel">
                     <div>
                         <div style="text-align: center; font-size: large;">Latent-Paint </div>
@@ -136,25 +133,22 @@
 
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve render_wrapper">
-                        <div id="compass_geo" class="render_div"></div>
+                        <div id="textcondition1_geo" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="compass_clipmesh" class="render_div"></div>
+                        <div id="textcondition1_clipmesh" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="compass_latentpaint" class="render_div"></div>
+                        <div id="textcondition1_latentpaint" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="compass_ours" class="render_div"></div>
+                        <div id="textcondition1_ours" class="render_div"></div>
                     </div>
                 </div>
 
                  <div style="text-align: center; font-size: large; height: 50px;">  </div>
                 
                 <h2 class="title is-4">Image Conditional Generation</h2>
-                <div style="text-align: center">
-                    <img src="./static/teaser/compare_img.jpg" width="80%"/> 
-                </div>
                 <div id="results-carousel" class="carousel results-carousel">
                     <div>
                         <div style="text-align: center; font-size: large;">Conditional Image</div>
@@ -176,13 +170,13 @@
                         <!-- <div id="ambulance_geo" class="render_div"></div> -->
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="ambulance_clipmesh" class="render_div"></div>
+                        <div id="imgcondition1_clipmesh" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="ambulance_latentpaint" class="render_div"></div>
+                        <div id="imgcondition1_latentpaint" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="ambulance_ours" class="render_div"></div>
+                        <div id="imgcondition1_ours" class="render_div"></div>
                     </div>
                 </div>
             
@@ -345,7 +339,7 @@
         import { OrbitControls } from './js/OrbitControls.js'
         let div_to_scene = {
             "compass": {},
-            "ambulance": {},
+            "imgcondition1": {},
             "backpack": {},
             "dumpster": {},
             "baroque": {}, 
@@ -359,7 +353,7 @@
         };
         let div_camera = {
             "compass": null,
-            "ambulance": null,
+            "imgcondition1": null,
             "backpack": null,
             "dumpster": null,
             "baroque": null,
@@ -388,7 +382,7 @@
             if (div_name.includes("compass")){
                 camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
             }
-            else if (div_name.includes("ambulance")) {
+            else if (div_name.includes("imgcondition1")) {
                 camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
             }
             else if (div_name.includes("backpack")) {
@@ -544,7 +538,7 @@
             // slider.addEventListener("mouseout", reset_orbit_controls);
 
             // const qualitative = ["compass", "ambulance", "backpack", "dumpster"];
-            const qualitative = ["compass", "ambulance"];
+            const qualitative = ["compass", "imgcondition1"];
 
             qualitative.forEach(element => {
                 if (element.includes("compass")){
