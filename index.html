@@ -133,31 +133,31 @@
 
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve render_wrapper">
-                        <div id="textCond1_geo" class="render_div"></div>
+                        <div id="textCond1_col1" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="textCond1_clipmesh" class="render_div"></div>
+                        <div id="textCond1_col2" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="textCond1_latentpaint" class="render_div"></div>
+                        <div id="textCond1_col3" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="textCond1_ours" class="render_div"></div>
+                        <div id="textCond1_col4" class="render_div"></div>
                     </div>
                 </div>
 
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve render_wrapper">
-                        <div id="textCond2_geo" class="render_div"></div>
+                        <div id="textCond2_col1" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="textCond2_clipmesh" class="render_div"></div>
+                        <div id="textCond2_col2" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="textCond2_latentpaint" class="render_div"></div>
+                        <div id="textCond2_col3" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="textCond2_ours" class="render_div"></div>
+                        <div id="textCond2_col4" class="render_div"></div>
                     </div>
                 </div>
 
@@ -183,13 +183,13 @@
                         <img src="./static/img/image_prompt_chair.jpg" width="100%" />
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="imgCond1_clipmesh" class="render_div"></div>
+                        <div id="imgCond1_col2" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="imgCond1_latentpaint" class="render_div"></div>
+                        <div id="imgCond1_col3" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="imgCond1_ours" class="render_div"></div>
+                        <div id="imgCond1_col4" class="render_div"></div>
                     </div>
                 </div>
 
@@ -198,13 +198,13 @@
                         <img src="./static/img/image_prompt_chair.jpg" width="100%" />
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="imgCond2_clipmesh" class="render_div"></div>
+                        <div id="imgCond2_col2" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="imgCond2_latentpaint" class="render_div"></div>
+                        <div id="imgCond2_col3" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="imgCond2_ours" class="render_div"></div>
+                        <div id="imgCond2_col4" class="render_div"></div>
                     </div>
                 </div>
 
@@ -215,7 +215,7 @@
     <section class="section">
         <div class="container is-max-desktop">
             <div class="container">
-                <h2 class="title is-3">Diverse Generation2</h2>
+                <h2 class="title is-3">Diverse Generation3</h2>
                 
                 <div class="content has-text-justified">
                 <div class="row captioned_videos">
@@ -300,33 +300,13 @@
             "textCond1": {},
             "textCond2": {},
             "imgCond1": {},
-            "imgCond2": {},
-            "backpack": {},
-            "dumpster": {},
-            "baroque": {}, 
-            "wooden": {}, 
-            "cyberpunk": {}, 
-            "lego": {},
-            "airplane": {}, 
-            "crocodile": {}, 
-            "hippo": {}, 
-            "sheep": {}
+            "imgCond2": {}
         };
         let div_camera = {
             "textCond1": null,
             "textCond2": null,
             "imgCond1": null,
-            "imgCond2": null,
-            "backpack": null,
-            "dumpster": null,
-            "baroque": null,
-            "wooden": null,
-            "cyberpunk": null,
-            "lego": null,
-            "airplane": null,
-            "crocodile": null,
-            "hippo": null,
-            "sheep": null,
+            "imgCond2": null
         };
         
         let mouse_button_down = false;
@@ -342,21 +322,6 @@
             console.log(width, height)
             let camera = new THREE.PerspectiveCamera( 35, width / height, 0.1, 50 );
             let camera_init_position = new THREE.Vector3( -1, 0.5, 1 );
-            if (div_name.includes("textCond1")){
-                camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
-            }
-            else if (div_name.includes("textCond2")) {
-                camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
-            }
-            else if (div_name.includes("imgCond1")) {
-                camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
-            }
-            else if (div_name.includes("imgCond2")) {
-                camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
-            }
-            else if (div_name.includes("backpack")) {
-                camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1  );
-            }
             camera.position.set(camera_init_position.x, camera_init_position.y, camera_init_position.z);
             return camera;
         }
@@ -504,54 +469,33 @@
         window.onload = function() {
             let slider = document.getElementsByClassName("slider")[0]
             slider.removeAttribute("tabIndex")
-            // slider.addEventListener("mouseout", reset_orbit_controls);
 
             const qualitative = ["textCond1", "textCond2", "imgCond1", "imgCond2"];
 
             qualitative.forEach(element => {
                 if (element.includes("textCond")){
-                    setup_render_divs(element+"_geo", element,
-                    './samples/qualitative/'+element+'/geo/mesh_normalized.obj', 
-                    './samples/qualitative/'+element+'/geo/mesh_normalized.mtl', 
-                    './samples/qualitative/'+element+'/geo/mesh_normalized.png'
+                    setup_render_divs(element+"_col1", element,
+                    './static/meshes/'+element+'/col1/mesh_normalized.obj', 
+                    './static/meshes/'+element+'/col1/mesh_normalized.mtl', 
+                    './static/meshes/'+element+'/col1/mesh_normalized.png'
                     );
                 }
                 setup_render_divs(element+"_clipmesh", element,
-                    './samples/qualitative/'+element+'/clipmesh/mesh_normalized.obj', 
-                    './samples/qualitative/'+element+'/clipmesh/mesh_normalized.mtl', 
-                    './samples/qualitative/'+element+'/clipmesh/mesh_normalized.png'
+                    './static/meshes/'+element+'/col2/mesh_normalized.obj', 
+                    './static/meshes/'+element+'/col2/mesh_normalized.mtl', 
+                    './static/meshes/'+element+'/col2/mesh_normalized.png'
                 );
                 setup_render_divs(element+"_latentpaint", element,
-                    './samples/qualitative/'+element+'/latentpaint/mesh_normalized.obj', 
-                    './samples/qualitative/'+element+'/latentpaint/mesh_normalized.mtl', 
-                    './samples/qualitative/'+element+'/latentpaint/mesh_normalized.png'
+                    './static/meshes/'+element+'/col3/mesh_normalized.obj', 
+                    './static/meshes/'+element+'/col3/mesh_normalized.mtl', 
+                    './static/meshes/'+element+'/col3/mesh_normalized.png'
                 );
                 setup_render_divs(element+"_ours", element,
-                    './samples/qualitative/'+element+'/ours/mesh_normalized.obj', 
-                    './samples/qualitative/'+element+'/ours/mesh_normalized.mtl', 
-                    './samples/qualitative/'+element+'/ours/mesh_normalized.png'
+                    './static/meshes/'+element+'/col4/mesh_normalized.obj', 
+                    './static/meshes/'+element+'/col4/mesh_normalized.mtl', 
+                    './static/meshes/'+element+'/col4/mesh_normalized.png'
                 );
             });
-
-
-            // const styles = ["baroque", "wooden", "cyberpunk", "lego"];
-            // styles.forEach(element => {
-            //     setup_render_divs(element+"_porsche", element,
-            //     './samples/different_style/'+element+'_porsche/mesh_normalized.obj', 
-            //     './samples/different_style/'+element+'_porsche/mesh_normalized.mtl', 
-            //     './samples/different_style/'+element+'_porsche/mesh_normalized.png'
-            //     );
-            // });
-
-            // const others = ["airplane", "crocodile", "hippo", "sheep"];
-            // others.forEach(element => {
-            //     setup_render_divs(element+"_porsche", element,
-            //     './samples/wrong_prompt/'+element+'/mesh_normalized.obj', 
-            //     './samples/wrong_prompt/'+element+'/mesh_normalized.mtl', 
-            //     './samples/wrong_prompt/'+element+'/mesh_normalized.png'
-            //     );
-            // });
-            
         };
 
     </script>
