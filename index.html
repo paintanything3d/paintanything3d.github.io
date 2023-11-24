@@ -115,7 +115,7 @@
         <div class="container is-max-desktop">
             <div class="container">
                 <h2 class="title is-3">Conditional Generation</h2>
-                <h2 class="title is-4">Text Conditional Generation2</h2>
+                <h2 class="title is-4">Text Conditional Generation</h2>
                 <div id="results-carousel" class="carousel results-carousel">
                     <div>
                         <div style="text-align: center; font-size: large;">Latent-Paint </div>
@@ -146,11 +146,25 @@
                     </div>
                 </div>
 
-                 <div style="text-align: center; font-size: large; height: 50px;">  </div>
-                
-                <h2 class="title is-4">Image Conditional Generation55</h2>
                 <div id="results-carousel" class="carousel results-carousel">
-                    <div>
+                    <div class="item item-steve render_wrapper">
+                        <div id="textCond2_geo" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+                        <div id="textCond2_clipmesh" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+                        <div id="textCond2_latentpaint" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+                        <div id="textCond2_ours" class="render_div"></div>
+                    </div>
+                </div>
+
+                 <div style="text-align: center; font-size: large; height: 50px;">  </div>
+                <h2 class="title is-4">Image Conditional Generation</h2>
+                <div id="results-carousel" class="carousel results-carousel">
+                   <div>
                         <div style="text-align: center; font-size: large;">Conditional Image</div>
                     </div>
                     <div>
@@ -178,7 +192,7 @@
                         <div id="imgCond1_ours" class="render_div"></div>
                     </div>
                 </div>
-                
+
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve">
                         <img src="./static/img/image_prompt_chair.jpg" width="100%" />
@@ -194,142 +208,60 @@
                     </div>
                 </div>
 
-                <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-steve">
-                        <img src="./static/img/image_prompt_chair.jpg" width="100%" />
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="imgCond3_clipmesh" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="imgCond3_latentpaint" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="imgCond3_ours" class="render_div"></div>
-                    </div>
-                </div>
-
-                 <!-- <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-steve render_wrapper">
-                        <img src="./static/img/image_prompt_fighter.png" width="100%" />
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="backpack_clipmesh" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="backpack_latentpaint" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="backpack_ours" class="render_div"></div>
-                    </div>
-                </div> -->
-
-                <!-- <div style="text-align: center;">"a backpack" </div>  -->
-
-                <!-- <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-steve render_wrapper">
-                        <div id="dumpster_geo" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="dumpster_clipmesh" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="dumpster_latentpaint" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="dumpster_ours" class="render_div"></div>
-                    </div>
-                </div>
-
-                <div style="text-align: center;">"a dumpster" </div> 
-            </div> -->
+                
         </div>
     </section>
 
-<section class="section">
+    <section class="section">
         <div class="container is-max-desktop">
             <div class="container">
                 <h2 class="title is-3">Diverse Generation</h2>
-                <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-steve render_wrapper">
-                        <div id="baroque_porsche" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="wooden_porsche" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="cyberpunk_porsche" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="lego_porsche" class="render_div"></div>
-                    </div>
-                </div>
-
-                <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-steve render_wrapper">
-                        <div id="airplane_porsche" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="crocodile_porsche" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="hippo_porsche" class="render_div"></div>
-                    </div>
-                    <div class="item item-steve render_wrapper">
-                        <div id="sheep_porsche" class="render_div"></div>
-                    </div>
-                </div>
                 
+                <div class="content has-text-justified">
+                <div class="row captioned_videos">
+                    <div class="col-3">
+                        <div class="video-compare-container" style="width: 100%">
+                            <video class="video lazy" id="ex1" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                                <source data-src="./static/videos/cloth.mp4" type="video/mp4"></source>
+                            </video>
+                            <canvas height="752" class="videoMerge" id="ex1Merge" width="1002"></canvas>
+                        </div>
+                        <h6 class="caption">Prompt1:"xxxx"</h6>
+                    </div>
+                    <div class="col-3">
+                        <div class="video-compare-container" style="width: 100%">
+                            <video class="video lazy" id="ex2" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                                <source data-src="./static/videos/cloth.mp4" type="video/mp4"></source>
+                            </video>
+                            <canvas height="752" class="videoMerge" id="ex2Merge" width="1002"></canvas>
+                        </div>
+                        <h6 class="caption">Prompt2:"xxxx"</h6>
+                    </div>
+                    <div class="col-3">
+                        <div class="video-compare-container" style="width: 100%">
+                            <video class="video lazy" id="ex3" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                                <source data-src="./static/videos/cloth.mp4" type="video/mp4"></source>
+                            </video>
+                            <canvas height="752" class="videoMerge" id="ex3Merge" width="1002"></canvas>
+                        </div>
+                        <h6 class="caption">Prompt3:"xxxx"</h6>
+                    </div>
+                    <div class="col-3">
+                        <div class="video-compare-container" style="width: 100%">
+                            <video class="video lazy" id="ex4" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                                <source data-src="./static/videos/cloth.mp4" type="video/mp4"></source>
+                            </video>
+                            <canvas height="752" class="videoMerge" id="ex4Merge" width="1002"></canvas>
+                        </div>
+                        <h6 class="caption">Prompt4:"xxxx"</h6>
+                    </div>
+                </div>
+            </div>
+            
+
             </div>
         </div>
     </section>
-
-    <!-- <section class="section">
-        <div class="ontainer is-max-desktop">
-            <div class="container">
-                <h2 class="title is-3">More Tools for results show</h2>
-                <div class="content has-text-justified">
-        <div class="row captioned_videos">
-                <div class="col-3">
-                    <div class="video-compare-container" style="width: 100%">
-                        <video class="video lazy" id="ex1" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                            <source data-src="./static/videos/cloth.mp4" type="video/mp4"></source>
-                        </video>
-                        <canvas height="752" class="videoMerge" id="ex1Merge" width="1002"></canvas>
-                    </div>
-                    <h6 class="caption">Prompt1:"xxxx"</h6>
-                </div>
-                <div class="col-3">
-                    <div class="video-compare-container" style="width: 100%">
-                        <video class="video lazy" id="ex2" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                            <source data-src="./static/videos/cloth.mp4" type="video/mp4"></source>
-                        </video>
-                        <canvas height="752" class="videoMerge" id="ex2Merge" width="1002"></canvas>
-                    </div>
-                    <h6 class="caption">Prompt2:"xxxx"</h6>
-                </div>
-                <div class="col-3">
-                    <div class="video-compare-container" style="width: 100%">
-                        <video class="video lazy" id="ex3" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                            <source data-src="./static/videos/cloth.mp4" type="video/mp4"></source>
-                        </video>
-                        <canvas height="752" class="videoMerge" id="ex3Merge" width="1002"></canvas>
-                    </div>
-                    <h6 class="caption">Prompt3:"xxxx"</h6>
-                </div>
-                <div class="col-3">
-                    <div class="video-compare-container" style="width: 100%">
-                        <video class="video lazy" id="ex4" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                            <source data-src="./static/videos/cloth.mp4" type="video/mp4"></source>
-                        </video>
-                        <canvas height="752" class="videoMerge" id="ex4Merge" width="1002"></canvas>
-                    </div>
-                    <h6 class="caption">Prompt4:"xxxx"</h6>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div> -->
 
 
     <footer class="footer">
@@ -366,9 +298,9 @@
         import { OrbitControls } from './js/OrbitControls.js'
         let div_to_scene = {
             "textCond1": {},
+            "textCond2": {},
             "imgCond1": {},
             "imgCond2": {},
-            "imgCond3": {},
             "backpack": {},
             "dumpster": {},
             "baroque": {}, 
@@ -382,9 +314,9 @@
         };
         let div_camera = {
             "textCond1": null,
+            "textCond2": null,
             "imgCond1": null,
             "imgCond2": null,
-            "imgCond3": null,
             "backpack": null,
             "dumpster": null,
             "baroque": null,
@@ -413,13 +345,13 @@
             if (div_name.includes("textCond1")){
                 camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
             }
+            else if (div_name.includes("textCond2")) {
+                camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
+            }
             else if (div_name.includes("imgCond1")) {
                 camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
             }
             else if (div_name.includes("imgCond2")) {
-                camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
-            }
-            else if (div_name.includes("imgCond3")) {
                 camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
             }
             else if (div_name.includes("backpack")) {
@@ -574,10 +506,10 @@
             slider.removeAttribute("tabIndex")
             // slider.addEventListener("mouseout", reset_orbit_controls);
 
-            const qualitative = ["textCond1", "imgCond1", "imgCond2", "imgCond3"];
+            const qualitative = ["textCond1", "textCond2", "imgCond1", "imgCond2"];
 
             qualitative.forEach(element => {
-                if (element.includes("textCond1")){
+                if (element.includes("textCond")){
                     setup_render_divs(element+"_geo", element,
                     './samples/qualitative/'+element+'/geo/mesh_normalized.obj', 
                     './samples/qualitative/'+element+'/geo/mesh_normalized.mtl', 
