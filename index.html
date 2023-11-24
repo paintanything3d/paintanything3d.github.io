@@ -146,20 +146,20 @@
                     </div>
                 </div>
 
-                 <!-- <div id="results-carousel" class="carousel results-carousel">
+                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-steve render_wrapper">
-                        <div id="compass_geo" class="render_div"></div>
+                        <div id="textCond2_geo" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="compass_clipmesh" class="render_div"></div>
+                        <div id="textCond2_clipmesh" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="compass_latentpaint" class="render_div"></div>
+                        <div id="textCond2_latentpaint" class="render_div"></div>
                     </div>
                     <div class="item item-steve render_wrapper">
-                        <div id="compass_ours" class="render_div"></div>
+                        <div id="textCond2_ours" class="render_div"></div>
                     </div>
-                </div> -->
+                </div>
 
                  <div style="text-align: center; font-size: large; height: 50px;">  </div>
                 
@@ -354,6 +354,7 @@
         import { OrbitControls } from './js/OrbitControls.js'
         let div_to_scene = {
             "textCond1": {},
+            "textCond2": {}
             "ambulance": {},
             "backpack": {},
             "dumpster": {},
@@ -368,6 +369,7 @@
         };
         let div_camera = {
             "textCond1": null,
+            "textCond2": null,
             "ambulance": null,
             "backpack": null,
             "dumpster": null,
@@ -394,7 +396,7 @@
             console.log(width, height)
             let camera = new THREE.PerspectiveCamera( 35, width / height, 0.1, 50 );
             let camera_init_position = new THREE.Vector3( -1, 0.5, 1 );
-            if (div_name.includes("textCond1")){
+            if (div_name.includes("textCond")){
                 camera_init_position = new THREE.Vector3( -1.1, 0.5, 1.1 );
             }
             else if (div_name.includes("ambulance")) {
@@ -553,10 +555,10 @@
             // slider.addEventListener("mouseout", reset_orbit_controls);
 
             // const qualitative = ["textCond1", "ambulance", "backpack", "dumpster"];
-            const qualitative = ["textCond1", "ambulance"];
+            const qualitative = ["textCond1", "textCond2", "ambulance"];
 
             qualitative.forEach(element => {
-                if (element.includes("textCond1")){
+                if (element.includes("textCond")){
                     setup_render_divs(element+"_geo", element,
                     './samples/qualitative/'+element+'/geo/mesh_normalized.obj', 
                     './samples/qualitative/'+element+'/geo/mesh_normalized.mtl', 
