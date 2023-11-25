@@ -1,7 +1,7 @@
 # Blender 3.4.1
 # www.blender.org
 mtllib mesh_normalized.mtl
-o f1722ab650ad4d8dbe6fc4bf44e33d38
+o mesh_normalized
 v 0.108650 -0.021395 0.008571
 v 0.108740 -0.037100 -0.011541
 v 0.110374 -0.017983 -0.011541
@@ -11258,7 +11258,7 @@ vt -0.856206 0.688829
 vt -0.844237 0.667620
 vt -0.797624 0.603970
 s 0
-usemtl material_0.010
+usemtl mesh_normalized
 f 1/1/1 2/2/2 3/3/3
 f 4/4/4 5/5/5 6/6/6
 f 7/7/7 4/4/4 6/6/6
