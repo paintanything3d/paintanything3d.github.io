@@ -304,6 +304,44 @@
             </div>
 
 
+            <div class="content has-text-justified">
+                <div class="row captioned_videos">
+                    <div class="col-3">
+                        <div class="item item-steve">
+                        <img src="./static/imgs/diverse_gen_img_input1.png" width="100%" />
+                    </div>
+                        <h6 class="caption">Image-conditional input1</h6>
+                    </div>
+                    <div class="col-3">
+                        <div class="video-compare-container" style="width: 100%">
+                            <video class="video lazy" id="ex9" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                                <source data-src="./static/videos/imgCond_cloth.mp4" type="video/mp4"></source>
+                            </video>
+                            <canvas height="752" class="videoMerge" id="ex9Merge" width="1002"></canvas>
+                        </div>
+                        <h6 class="caption">Image-conditional output1</h6>
+                    </div>
+                    
+                    <div class="col-3">
+                        <div class="item item-steve">
+                        <img src="./static/imgs/diverse_gen_img_input2.png" width="100%" />
+                    </div>
+                        <h6 class="caption">Image-conditional input2</h6>
+                    </div>
+                    <div class="col-3">
+                        <div class="video-compare-container" style="width: 100%">
+                            <video class="video lazy" id="ex10" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                                <source data-src="./static/videos/imgCond_car.mp4" type="video/mp4"></source>
+                            </video>
+                            <canvas height="752" class="videoMerge" id="ex10Merge" width="1002"></canvas>
+                        </div>
+                        <h6 class="caption">Image-conditional output2</h6>
+                    </div>
+                </div>
+            </div>
+
+
+
             </div>
         </div>
     </section>
